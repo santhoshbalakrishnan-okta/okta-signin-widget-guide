@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Guide!</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            pre {
+                background: #eeeeee;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 text-center">
+                    <h2>I want to ...</h2>
+                    <!-- logo button-->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#logoModal">
+                        Add logo
+                    </button><br /> <br />
+
+                    <!-- change background button-->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#changeBgModal">
+                        Change background
+                    </button>
+
+                    <!-- logo Modal -->
+                    <div class="modal fade" id="logoModal" tabindex="-1" role="dialog" aria-labelledby="logoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="logoModalLabel">Add logo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-left">
+                                    <ol>
+                                        <li>Find <code>// config</code> section under <code>&lt;script&gt;</code> tag.</li>
+                                        <li>Add the <code>logo</code> key-value pair to <code>var config</code> json.</li>
+                                    </ol>
+                                    <pre><code>
+var config = {
+  baseUrl: '{url}',
+  ...
+  logo: '/path/to/logo.png',
+  ...
+};
+                                    </code></pre>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- change background Modal -->
+                <div class="modal fade" id="changeBgModal" tabindex="-1" role="dialog" aria-labelledby="changeBgModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="changeBgModalLabel">Change background</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-left">
+                                <ol>
+                                    <li> Add <code>&lt;style&gt;</code> tag under <code>&lt;head&gt;</code> tag if it does not exist already. </li>
+                                    <li> Within the <code>&lt;style&gt;</code> tag, add the following </li>
+                                </ol>
+                                <pre><code>
+#okta-sign-in {
+  background-color: insert-color-here
+}
+                                    </code></pre>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+                <div class="col-9">
+                    <iframe height="100%" width="100%" frameborder="0" src="//embed.plnkr.co/GpVHi65jzvK5VcpeherN/"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
